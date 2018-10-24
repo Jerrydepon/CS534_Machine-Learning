@@ -97,7 +97,7 @@ class Perceptron:
 
         return self.wa
 
-    def kernelMap(self, kMap, row, col, p, x, y, x2, y2):
+    def kernelMap(self, kMap, row, col, p, x, y, x2):
         if kMap[row, col] != 0:
             return kMap[row, col]
 
@@ -105,15 +105,15 @@ class Perceptron:
                 np.dot(x[row], x2[col].T)) ** p
         return kMap[row, col]
 
-    def sumMap(self, alpha, i, kMap, p, x, y, x2, y2):
+    def sumMap(self, alpha, i, kMap, p, x, y, x2):
         sum = 0
         for j, val in alpha.items():
-            sum += self.kernelMap(kMap, j, i, p, x, y, x2, y2) * val * y2[j]
+            sum += self.kernelMap(kMap, j, i, p, x, y, x2) * val * y[j]
         return sum
 
     def kernelPerceptron(self, iter_limit):
         alphaDic = {}
-        power_index = 2
+        power_index = 1
         kMap = np.zeros([self.exampleNum, self.exampleNum])
         kMap_v = np.zeros([self.exampleNum, self.exampleNum])
 
@@ -136,7 +136,7 @@ class Perceptron:
             #                 self.feature, self.result_label,
             #                 self.exampleNum_val, self.feature_val,
             #                 self.result_label_val)
-            print("iter", i+1, ": ", err_t, err_v)
+            # print("iter", i+1, ": ", err_t, err_v)
             print("iter", iter+1, ": ", err_t)
 
         return alphaDic
@@ -144,7 +144,7 @@ class Perceptron:
     def kernelError(self, alpha, kMap, p, x, y, exa_size, x2, y2):
         err_count = 0
         for i in range(0, exa_size):
-            sum_K_alpha_y = self.sumMap(alpha, i, kMap, p, x, y, x2, y2)
+            sum_K_alpha_y = self.sumMap(alpha, i, kMap, p, x, y, x2)
             u = np.sign(sum_K_alpha_y)
             if (y2[i] * u <= 0):
                 err_count += 1
@@ -172,14 +172,14 @@ valData.insert(loc=785, column='785', value=dummy_col_v)
 print("\n ------------ Perceptron ------------")
 
 pct = Perceptron(trainData, valData)
-print("\n Online Perceptron")
-q1_w = pct.onlinePerceptron(iter_limit)
-print("w of online:")
-print(q1_w)
-print("\n Average Perceptron")
-q2_w = pct.averagePerceptron(iter_limit)
-print("w of average:")
-print(q2_w)
+# print("\n Online Perceptron")
+# q1_w = pct.onlinePerceptron(iter_limit)
+# print("w of online:")
+# print(q1_w)
+# print("\n Average Perceptron")
+# q2_w = pct.averagePerceptron(iter_limit)
+# print("w of average:")
+# print(q2_w)
 print("\n Kernel Perceptron")
 q3 = pct.kernelPerceptron(iter_limit)
 print("alpha:")
