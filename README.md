@@ -1,7 +1,7 @@
 # Machine_Learning (2018 Fall)
 Implementation Assignment 1: <br />
 This report analyzes the data set of house sold in Seattle. By the training data, we can use
-gradient descent to achieve some models with different weights on different features. Theses weights can be further applied on validation data to find the smallest SSE of price. The techniques we use are data analysis before modeling, choosing different learning rate, experiment with different regularization coefficient, and discussion about normalization. Hope after the effort on each part, we can get the desirable weights to predict the test data with small SSE.
+gradient descent to achieve some models with different weights on different features. Theses weights can be further applied on validation data to find the smallest SSE of price. The techniques we use are data analysis before modeling, choosing different learning rate, experiment with different regularization coefficient, and discussion about normalization.
 
 -----------------
 Implementation Assignment 2: <br />
