@@ -1,13 +1,8 @@
-# CS537_Computer_Vision (2019 Winter)
-HW1: <br />
-Detecting keypoints in images, and computing deep features of the detected keypoints.
+# Perceptron
+* See "perceptron.py" in "/Assignment2" for online perceptron & average perceptron.
+* See "kernelPerceptron.py" in "/Assignment2" for polynomial kernel perceptron.
+* See "CS534 °™ Implementation Assignment 2.pdf" in "/Assignment2" for for our result and analysis.
 
------------------
-HW2: <br />
-Matching keypoints in pairs of images for the purposes of image retrieval.
 
------------------
-HW3: <br />
-Stereo geometry & epipolar lines.
 
 
