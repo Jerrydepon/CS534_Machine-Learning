@@ -1,13 +1,5 @@
-# CS537_Computer_Vision (2019 Winter)
-HW1: <br />
-Detecting keypoints in images, and computing deep features of the detected keypoints.
-
------------------
-HW2: <br />
-Matching keypoints in pairs of images for the purposes of image retrieval.
-
------------------
-HW3: <br />
-Stereo geometry & epipolar lines.
-
+# House Prices Research
+* See "Database Description.pdf" for parameters description.
+* See "pa1.py" in "/Assignment1" for the main linear regression process.
+* See "CS534 — Implementation Assignment 1.pdf" in "/Assignment1" for our analysis.
 
